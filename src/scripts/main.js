@@ -9,7 +9,7 @@ $(function () {
 		nav: false,
 		dots: false,
 		items: 1,
-		margin: 0
+		margin: 0,
 	})
 
 
