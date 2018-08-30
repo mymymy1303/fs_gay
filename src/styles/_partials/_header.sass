@@ -1,10 +1,58 @@
 header
+	background: $whites
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3)
 	.navbar
-		+pad(null 0)
+		padding: 1rem 0
+		font-family: 'Lato', sans-serif
 	.navbar-brand
 		img 
-			max-height: 1rem
+			max-height: 2rem
+	.navbar-collapse
+		margin: 0
+		padding: 0
+		ul.navbar-nav
+			li.nav-item
+				text-align: center
+				background-color: transparent
+				border-top-left-radius: 1rem
+				border-bottom-right-radius: 1rem
+				transition: .3s all ease-in-out
+				a.nav-link
+					font-size: 1rem
+					text-transform: capitalize
+					color: #000
+					font-weight: 400
+					padding: .625rem
+				&:hover, &:active
+					background-color: #000
+					a.nav-link
+						color: $whites
+
+	+media-breakpoint-up(sm)
+		//LANDSCAPE PHONES, 576-768px
+		.navbar-collapse
+			ul.navbar-nav
+				flex-direction: row
+				flex-wrap: wrap
+				li.nav-item
+					flex: 0 0 50%
+					max-width: 50%
 	+media-breakpoint-up(md)
-		.navbar-brand
-			img 
-				max-height: 2rem
+		//TABLETS, 768-992px
+		.navbar-collapse
+			ul.navbar-nav
+				flex-direction: row
+				flex-wrap: wrap
+				li.nav-item
+					flex: 0 0 33.33%
+					max-width: 33.33%
+	+media-breakpoint-up(lg)
+		//DESKTOP, 992px and up
+		.navbar-collapse
+			ul.navbar-nav
+				flex-direction: initial
+				flex-wrap: initial
+				li.nav-item
+					flex: initial
+					max-width: initial
+
