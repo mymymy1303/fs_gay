@@ -146,3 +146,53 @@ body
 						font-size: 3rem
 				figure
 					height: 11.5rem
+
+// -------------------------------------
+// ----------SERVICES-SECTION-----------
+// -------------------------------------
+.home_services
+	+section(#000, 368px)
+	padding: 3rem 0
+	.section--title-wrapper
+		position: relative
+		width: 100%
+		&:before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 100%
+			background-color: $whites
+			left: 0
+			top: 0
+			z-index: 1
+			padding: 0
+		h2
+			position: absolute
+			left: 50%
+			top: 0
+			transform: translate(-50%, -50%)
+			background-color: #000
+			z-index: 2
+			padding: 0 1rem
+	.home_services_item
+		a
+			text-decoration: none
+			transition: .3s all ease-in-out
+			figure
+				margin-bottom: 0
+				img
+					filter: grayscale(100%)
+					transition: .3s all ease-in-out
+				figcaption
+					h3,p
+						transition: .3s all ease-in-out
+			&:hover
+				figure
+					img
+						filter: grayscale(0%)
+						box-shadow: 0 0 0 5px $yellow
+					figcaption
+						h3
+							color: $yellow
+						p
+							color: $cyan
