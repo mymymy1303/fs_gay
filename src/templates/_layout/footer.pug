@@ -1,45 +1,62 @@
 <!-- ////////////// FOOTER ////////////// -->
-footer.pt-4.my-md-5.border-top
-	.container
-		.row
-			.col-12.col-md
-				img.mb-2(src="./img/logo.png" alt="")
-				small.d-block.mb-3.text-muted Copyright 2018 by 
-					a(href='/') FullStack Vietnam.
-			.col-6.col-md
-				h5 Features
-				ul.list-unstyled.text-small
-					li
-						a.text-muted(href="#") Cool stuff
-					li
-						a.text-muted(href="#") Random feature
-					li
-						a.text-muted(href="#") Team feature
-					li
-						a.text-muted(href="#") Stuff for developers
-					li
-						a.text-muted(href="#") Another one
-					li
-						a.text-muted(href="#") Last time
-			.col-6.col-md
-				h5 Resources
-				ul.list-unstyled.text-small
-					li
-						a.text-muted(href="#") Resource
-					li
-						a.text-muted(href="#") Resource name
-					li
-						a.text-muted(href="#") Another resource
-					li
-						a.text-muted(href="#") Final resource
-			.col-6.col-md
-				h5 About
-				ul.list-unstyled.text-small
-					li
-						a.text-muted(href="#") Team
-					li
-						a.text-muted(href="#") Locations
-					li
-						a.text-muted(href="#") Privacy
-					li
-						a.text-muted(href="#") Terms
+footer.footer
+	section.footer__info.footer__info--darkgray
+		.container
+			.row
+				.col-12.col-sm-12.col-md-12.col-lg-4.mb-4.mb-lg-0
+					h3.block-title.block-title--small.block-title--uppercase.block-title--yellow.mb-3 fullstack vietnam
+					ul.list-unstyled.list--nomargin
+						li
+							p.text.text--small.text--gray Mobile: (+84) 969689893
+						li
+							p.text.text--small.text--gray Email: admin@fullstackvietnam.com
+						li
+							p.text.text--small.text--gray Địa chỉ: 28 - đường số 2 - CITY LAND phường 7 - Gò Vấp - HCM
+				.col-12.col-sm-12.col-md-12.col-lg-6.mb-4.mb-lg-0
+					.row
+						.col
+							h3.block-title.block-title--small.block-title--uppercase.block-title--yellow.mb-3 links
+					.row
+						.col-12.col-sm-6
+							ul.list-unstyled.list--nomargin
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học FrontEnd Master
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học FullStack Developer
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học Design chuyên nghiệp
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Lịch khai giảng
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Đăng ký khóa học
+						.col-12.col-sm-6
+							ul.list-unstyled.list--nomargin
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học FrontEnd Master
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học FullStack Developer
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Khóa học Design chuyên nghiệp
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Lịch khai giảng
+								li.link-wrapper
+									a.link.link--small.link--gray(href="#") Đăng ký khóa học
+				.col-12.col-sm-12.col-md-12.col-lg-2
+					ul.list-unstyled.list-inline.list--nomargin.social-buttons
+						li.list-inline-item.mr-4.mr-lg-2
+							a.btn.btn--circle.btn--white
+								i.fa.fa-twitter
+						li.list-inline-item
+							a.btn.btn--circle.btn--white
+								i.fa.fa-facebook
+					
+	section.footer__copyright.footer__copyright--yellow
+		.container
+			.row.align-items-center.justify-content-between
+				.col-12.col-sm
+					p.text.text--small.text--black.mb-3.mb-sm-0 Copyright by Fullstack Vietnam
+				.col-12.col-sm
+					form.form--relative
+						.form-group.form__group--nomargin
+							input.input__textfield.input--black(type="email" placeholder="Email của bạn").form-control
+						button(type="submit").btn.button.button--rec.button--white.button--float Gửi
