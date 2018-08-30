@@ -6,12 +6,37 @@ block variables
 	- var bodyclass = 'home'
 
 block body
-	section.home
-		.container
-			.row
-				.col
-					.jumbotron.text-center.mt-4
-						h1.hidden-md-up.display-4 Awesome Bootstrap Sites!
-						h2.hidden-md-up Dễ dàng triển khai và sử dụng
-						p.lead Bộ công cụ phát triển web vô cùng mạnh mẽ dựa trên nền tảng Bootstrap.
+	// ------------------------------------
+	// ----------WELCOME-SLIDER-------------
+	// -------------------------------------
+	section.home_welcome_slider
+		.owl-carousel.owl-theme#welcome_slider
+			.welcome_slider_item
+				.main_title
+					h1.mb-5
+						|Chúng tôi là 
+						br.responsive_break
+						|FullStack Vietnam
+					p.text.text--normal.text--white.text--light.mb-4
+						|Reference site about Lorem Ipsum, giving 
+						br.responsive_break
+						|information on its origin, as well as a 
+						br.responsive_break
+						|random Lipsum generator.
+					a.btn.btn--white.btn--uppercase.btn--bold(href="javascript:void(0)") Xem chi tiết
+				.welcome_slider_img_1
+			.welcome_slider_item
+				.main_title
+					h1.mb-5
+						|Chúng tôi là 
+						br.responsive_break
+						|FullStack Vietnam
+					p.text.text--normal.text--white.text--light.mb-4
+						|Reference site about Lorem Ipsum, giving 
+						br.responsive_break
+						|information on its origin, as well as a 
+						br.responsive_break
+						|random Lipsum generator.
+					a.btn.btn--white.btn--uppercase.btn--bold(href="javascript:void(0)") Xem chi tiết
+				.welcome_slider_img_2
 

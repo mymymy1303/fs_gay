@@ -1,2 +1,76 @@
 body
 	font-family: 'Lato', sans-serif
+
+// ------------------------------------
+//---------------SECTION---------------
+//-------------------------------------
+=section($section_bg: $whites, $section_min_height: 368px)
+	min-height: $section_min_height
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0
+	padding: 4.5rem 0
+	background-color: $section_bg
+
+// ------------------------------------
+//----------WELCOME-SLIDER-------------
+//-------------------------------------
+.home_welcome_slider
+	+section(#000, 568px)
+	padding: 0
+	.owl-carousel.owl-theme
+		.welcome_slider_item
+			.main_title
+				width: 100%
+				position: absolute
+				z-index: 3
+				top: 50%
+				transform: translateY(-50%)
+				text-align: center
+				padding: 0 1rem
+				h1
+					font-size: 2.2rem
+					color: $whites
+					font-weight: 300
+				p
+					line-height: 1.3rem
+				a
+					font-size: 1.2rem
+					padding: 0
+					width: 12rem
+					height: 3rem
+					line-height: 3rem
+					border-radius: 0
+			.welcome_slider_img_1, .welcome_slider_img_2
+				width: 100%
+				height: 568px
+				background-position: top center
+				background-size: cover
+				background-repeat: no-repeat
+				&:before
+					position: absolute
+					content: ''
+					width: 100%
+					height: 100%
+					z-index: 2
+					background-color: rgba(0,0,0,.5)
+			.welcome_slider_img_1
+				background-image: url('../img/home_welcome_slider_1.png')
+			.welcome_slider_img_2
+				background-image: url('../img/home_welcome_slider_2.png')
+				background-size: contain
+				background-position: top right 30%
+	+media-breakpoint-up(lg)
+		//DESKTOP, 992px and up
+		.owl-carousel.owl-theme
+			.welcome_slider_item
+				.main_title
+					text-align: left
+					left: 10%
+					h1
+						font-size: 2.5rem
+				.welcome_slider_img_1, .welcome_slider_img_2
+					&:before
+						background-color: transparent
