@@ -180,19 +180,38 @@ body
 			transition: .3s all ease-in-out
 			figure
 				margin-bottom: 0
-				img
-					filter: grayscale(100%)
-					transition: .3s all ease-in-out
+				.home_services_img_wrapper
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						z-index: 1
+						transition: .3s all ease-in-out
+					img
+						filter: grayscale(100%)
+						transition: .3s all ease-in-out
 				figcaption
 					h3,p
 						transition: .3s all ease-in-out
 			&:hover
 				figure
-					img
-						filter: grayscale(0%)
-						box-shadow: 0 0 0 5px $yellow
+					.home_services_img_wrapper
+						&:before
+							box-shadow: inset 0 0 0 5px $yellow
+						img
+							filter: grayscale(0%)
 					figcaption
 						h3
 							color: $yellow
 						p
 							color: $cyan
+
+// -------------------------------------
+// ----------HAPPY-SECTION--------------
+// -------------------------------------
+.home_happy
+	+section($black, 368px)
