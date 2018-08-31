@@ -180,30 +180,17 @@ body
 			transition: .3s all ease-in-out
 			figure
 				margin-bottom: 0
-				.home_services_img_wrapper
-					position: relative
-					&:before
-						content: ''
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						z-index: 1
-						transition: .3s all ease-in-out
-					img
-						filter: grayscale(100%)
-						transition: .3s all ease-in-out
+				img
+					filter: grayscale(100%)
+					transition: .3s all ease-in-out
 				figcaption
 					h3,p
 						transition: .3s all ease-in-out
 			&:hover
 				figure
-					.home_services_img_wrapper
-						&:before
-							box-shadow: inset 0 0 0 5px $yellow
-						img
-							filter: grayscale(0%)
+					img
+						box-shadow: 0 0 0 5px $yellow
+						filter: grayscale(0%)
 					figcaption
 						h3
 							color: $yellow
@@ -215,3 +202,73 @@ body
 // -------------------------------------
 .home_happy
 	+section($black, 368px)
+	padding-top: 1rem
+	.home_happy_content
+		position: relative
+		height: 30rem
+		overflow: hidden
+		margin-bottom: 0
+		background-image: url('../img/home_happy_bg.png')
+		background-position: right center
+		background-size: cover
+		background-repeat: no-repeat
+		&:before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 1
+			box-shadow: inset 0 0 0 .5rem $whites
+		h2,h3,a
+			position: absolute
+			z-index: 2
+		h2
+			background-color: #000
+			width: 90%
+			padding-top: .5rem
+			padding-bottom: 1rem
+			bottom: 5rem
+			left: 50%
+			transform: translateX(-50%)
+			font-size: 1.5rem
+		h3
+			text-align: center
+			background-color: $yellow
+			color: #000
+			width: 70%
+			padding: .25rem 0
+			bottom: 4.125rem
+			left: 50%
+			transform: translateX(-50%)
+			font-size: 1rem
+		a
+			height: 4rem
+			width: 4rem
+			border-radius: 50%
+			font-size: .85rem
+			font-weight: 700
+			display: flex
+			justify-content: center
+			align-items: center
+			right: 5%
+			top: 1rem
+	+media-breakpoint-up(md)
+		//TABLETS, 768-992px
+		.home_happy_content
+			h2
+				width: auto
+				font-size: 3rem
+				padding-left: 1rem
+				padding-right: 1rem
+				padding-bottom: 1.25rem
+			h3
+				width: auto
+				font-size: 1.2rem
+				padding: .5rem 1rem
+				bottom: 3.75rem
+			a
+				height: 4.5rem
+				width: 4.5rem
+				font-size: 1rem
